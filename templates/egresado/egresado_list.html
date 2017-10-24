@@ -1,0 +1,39 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<td>#</td>
+			<td>Nombre</td>
+			<td>Apellidos</td>
+			<td>Cedula</td>
+			<td>Fecha Nacimiento</td>
+			<td>Sexo</td>
+		</tr>
+		
+	</thead>
+	<tbody>
+		{%if object_list %}
+		{%for egresado in object_list %}
+		<tr>
+			<td>{{mascota.id}}</td>
+			<td>{{mascota.nombre}}</td>
+			<td>{{mascota.apellidos}}</td>
+			<td>{{mascota.codigo}}</td>
+			<td>{{mascota.fecha_nacimiento}}</td>
+			<td>{{mascota.sexo.nombre}}</td>
+			<td>
+				<a class="btn btn-primary" href="{#}">Editar</a>
+				<a class="btn btn-danger" href="{#}">Eliminar</a>
+			</td>
+		</tr>
+		{%endfor%}
+
+		{%else%}
+		<h1>No hay registros de Egresados </h1>
+		{%endif%}
+	</tbody>
+</table> 
+{% endblock%}

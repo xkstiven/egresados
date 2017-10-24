@@ -20,6 +20,7 @@ from django.contrib.auth.views import login, logout_then_login, password_reset, 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^usuario/', include('apps.usuario.urls', namespace='usuario')),
+    url(r'^egresado/', include('apps.egresado.urls', namespace='egresado')),
     url(r'^accounts/login',login, {'template_name': 'index.html'}, name= 'login' ),
     url(r'^logout/',logout_then_login,name= "logout"),
     url(r'^reset/password_reset', password_reset, 
