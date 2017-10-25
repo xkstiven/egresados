@@ -17,7 +17,7 @@ class EgresadoForm(forms.ModelForm):
 
 		labels = {
 			'nombre':'Nombre',
-			'apellidos': 'Aaapellidos',
+			'apellidos': 'Apellidos',
 			'codigo': 'Cedula',
 			'fecha_nacimiento':'Fecha Nacimiento',
 			'sexo':'Sexo',
