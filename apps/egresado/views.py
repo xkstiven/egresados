@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect 
 from django.http import HttpResponse
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView

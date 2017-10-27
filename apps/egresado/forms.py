@@ -3,6 +3,7 @@ from django import forms
 from apps.egresado.models import Egresado
 
 class EgresadoForm(forms.ModelForm):
+	
 	class Meta:
 		model = Egresado
 
@@ -11,7 +12,11 @@ class EgresadoForm(forms.ModelForm):
 			'apellidos',
 			'codigo',
 			'fecha_nacimiento',
+			'carrera',
+			'grado',
 			'sexo',
+			'pais',
+			'departamento',
 			'interes',
 		]
 
@@ -20,8 +25,12 @@ class EgresadoForm(forms.ModelForm):
 			'apellidos': 'Apellidos',
 			'codigo': 'Cedula',
 			'fecha_nacimiento':'Fecha Nacimiento',
+			'carrera':'Carrera',
+			'grado':'anyo graduacion',
 			'sexo':'Sexo',
-			'interes':'interes',
+			'pais':'Pais',
+			'departamento':'Departamento',
+			'interes':'Interes',
 		}
 
 		widgets={
@@ -30,5 +39,8 @@ class EgresadoForm(forms.ModelForm):
 		'codigo': forms.TextInput(attrs={'class':'form-control'}),
 		'fecha_nacimiento':forms.TextInput(attrs={'class':'form-control'}),
 		'sexo':forms.Select(attrs={'class':'form-control'}),
+		'grado':forms.TextInput(attrs={'class':'form-control'}),
+		'pais':forms.Select(attrs={'class':'form-control'}),
+		'departamento':forms.Select(attrs={"name":"select_0",'class':'form-control'}),
 		'interes':forms.CheckboxSelectMultiple(),
 		}

@@ -17,8 +17,8 @@ from django.core.urlresolvers import reverse_lazy
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-RECAPTCHA_PRIVATE_KEY = '6LcSmjUUAAAAAC6kiC-1yeoVOlULLxwu0NE5xaIT'
-RECAPTCHA_PUBLIC_KEY = '6LcSmjUUAAAAAK6CaVKk_ystoOwWyfIckfD8ywsB'
+RECAPTCHA_PRIVATE_KEY = '6LdNvTUUAAAAALwFsWAihtYFyYix3KEjdZUOYmUD'
+RECAPTCHA_PUBLIC_KEY = '6LdNvTUUAAAAAAdZ86XMydx1rJRfIc6ibxUZct6J'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 

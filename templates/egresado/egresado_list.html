@@ -18,15 +18,15 @@
 		{%if object_list %}
 		{%for egresado in object_list %}
 		<tr>
-			<td>{{mascota.id}}</td>
-			<td>{{mascota.nombre}}</td>
-			<td>{{mascota.apellidos}}</td>
-			<td>{{mascota.codigo}}</td>
-			<td>{{mascota.fecha_nacimiento}}</td>
-			<td>{{mascota.sexo.nombre}}</td>
+			<td>{{egresado.id}}</td>
+			<td>{{egresado.nombre}}</td>
+			<td>{{egresado.apellidos}}</td>
+			<td>{{egresado.codigo}}</td>
+			<td>{{egresado.fecha_nacimiento}}</td>
+			<td>{{egresado.sexo.nombre}}</td>
 			<td>
-				<a class="btn btn-primary" href="{#}">Editar</a>
-				<a class="btn btn-danger" href="{#}">Eliminar</a>
+				<a class="btn btn-primary" href="{% url 'egresado:egresado_editar' egresado.id %}">Editar</a>
+				<a class="btn btn-danger" href="{% url 'egresado:egresado_eliminar' egresado.id %}">Eliminar</a>
 			</td>
 		</tr>
 		{%endfor%}

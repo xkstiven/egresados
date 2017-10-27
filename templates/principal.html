@@ -1,0 +1,44 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+Egresados
+{% endblock %}
+{% block navbar%}
+
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+    <div>
+        <div class="col-md-6 col-md-offset-4">
+            <h1>Bienvenido </h1>
+            <br>
+        </div>
+    </div>
+    <div>
+        <div class="col-md-6 col-md-offset-4">
+            <img style="margin: 0 0 0px 0px; float: left;" src="https://icon-icons.com/icons2/665/PNG/512/observatory_icon-icons.com_60272.png" alt="Castle" width="140" height="140" />
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-4">
+            <a class="btn btn-default" href="{% url 'login'%}">Ingresar</a>
+            <a class="btn btn-default" href="{% url 'usuario:registrar'%}">Registrar</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-4">
+            <br>
+<br>
+<br>
+            <a class="btn btn-default" href="http://127.0.0.1:8000/admin/">ADMINISTRADOR</a>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
