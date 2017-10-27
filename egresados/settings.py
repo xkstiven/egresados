@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.usuario',
     'apps.egresado',
+    'apps.smart_selects',
 ]
 
 MIDDLEWARE_CLASSES = [

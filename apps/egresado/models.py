@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from apps.smart_selects.db_fields import GroupedForeignKey
 
 # Create your models here.
 
@@ -42,6 +43,6 @@ class Egresado(models.Model):
 	carrera = models.OneToOneField(Carrera,blank=True)
 	grado= models.IntegerField()
 	sexo= models.OneToOneField(Sexo,blank=True)
-	departamento= models.ForeignKey(Departamento,null=True,blank=True)
+	departamento= GroupedForeignKey(Pais,"pais")
 	pais= models.ForeignKey(Pais,null=True,blank=True)
 	interes = models.ManyToManyField(Interes, blank=True)
