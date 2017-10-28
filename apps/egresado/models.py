@@ -15,13 +15,13 @@ class Sexo(models.Model):
 		return '{}'.format(self.nombre)
 
 class Pais(models.Model):
-	nombre = models.CharField(self.nombre)
+	nombre = models.CharField(max_length=50)
 
 	def __str__(self):
 		return '{}'.format(self.nombre)
 
 class Departamento(models.Model):
-	nombre = models.CharField(self.nombre)
+	nombre = models.CharField(max_length=50)
 	pais = models.OneToOneField(Pais,blank=True)
 
 	def __str__(self):
